@@ -17,9 +17,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
-          cd /ci-cd
-          git add .
-          git commit -m "pulling from new"
+          cd ~/ci-cd
           git pull
           npm install
           pm2 restart 6
