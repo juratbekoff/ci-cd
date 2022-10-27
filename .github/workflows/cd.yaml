@@ -18,6 +18,6 @@ jobs:
         port: 22
         script: |
           cd ~/ci-cd
-          git pull
+          git pull origin main
           npm install
           pm2 restart 6
