@@ -7,9 +7,12 @@ app.get('/', (req, res) => {
 })
 
 app.get('/ok', (req, res) => {
-  res.send('it works! okeeeeeyyy! juratali xomragin ukaginam')
+  res.send({
+    message: 'Ok bolajonim amallading!'
+  })
 })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
