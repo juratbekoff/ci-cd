@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Connect to server and deploy changes
       uses: appleboy/ssh-action@master
@@ -19,6 +19,7 @@ jobs:
         script: |
           cd ~/ci-cd
           git pull
+          npm install
           pm2 restart 6
 
             
