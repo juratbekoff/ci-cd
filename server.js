@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 
 app.get('/ok', (req, res) => {
   res.send({
-    message: 'Ok bolajonim amallading! sujji gandon'
+    message: 'Ok bolajonim amallading! sujji gandon om kalla'
   })
 })
 
