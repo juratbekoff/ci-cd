@@ -3,8 +3,6 @@ name: Test CD
 on:
   push:
     branches: [ master ]
-  pull:
-    branches: [ master ]
 
 jobs:
   build:
