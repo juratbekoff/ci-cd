@@ -15,8 +15,8 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
-        cd ~/ci-cd
-        git pull
-        pm2 restart 6
-        
+          cd ~/ci-cd
+          git pull
+          pm2 restart 6
+
             
