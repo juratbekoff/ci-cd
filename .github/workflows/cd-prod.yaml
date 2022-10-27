@@ -1,8 +1,8 @@
-name: Test CD
+name: Production CD
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
-          cd ~/ci-cd
+          cd ~/ci-cd/ci-cd
           git pull
           npm install
-          pm2 restart 6
+          pm2 restart 7
