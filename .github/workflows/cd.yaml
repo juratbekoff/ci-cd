@@ -1,0 +1,22 @@
+name: Test CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Connect VPS and deploy changes
+        uses: appleboy/ssh-action@master
+        with:
+          host: 173.212.232.106
+          username: root
+          password: juratbek0820
+          port: 22
+          script: |
+            cd /ci-cd/learn-1
+            git pull
+            pm2 restart 7
