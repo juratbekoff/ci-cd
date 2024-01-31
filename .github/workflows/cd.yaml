@@ -17,6 +17,6 @@ jobs:
           password: juratbek0820
           port: 22
           script: |
-            cd /ci-cd/learn-1
+            cd /root/ci-cd/learn-1
             git pull
             pm2 restart 7
